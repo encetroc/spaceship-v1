@@ -1,3 +1,7 @@
+## to run
+1. cargo build
+2. cargo run
+
 ## this example contains use of:
 
 - system set, for custom schedule
