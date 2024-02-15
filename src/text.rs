@@ -80,13 +80,8 @@ fn despawn_pause_text(mut commands: Commands, query: Query<Entity, With<PauseTex
 fn spawn_score_text(
     mut commands: Commands,
     game_assets: Res<GameAssets>,
-    query_score: Query<&Score>,
     query_score_text: Query<&ScoreText>,
 ) {
-    /* let Ok(score) = query_score.get_single() else {
-        return;
-    }; */
-
     if query_score_text.get_single().is_ok() {
         return;
     };

@@ -18,9 +18,7 @@ const SHIP_DAMAGE: f32 = 3.0;
 pub struct Ship;
 
 #[derive(Component)]
-pub struct Life {
-    index: usize,
-}
+pub struct Life;
 
 pub struct ShipPlugin;
 
@@ -120,7 +118,7 @@ fn spawn_life(mut commands: Commands, game_assets: Res<GameAssets>) {
                 },
                 ..default()
             },
-            Life { index: i },
+            Life,
         ));
     }
 }

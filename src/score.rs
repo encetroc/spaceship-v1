@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-use crate::{asset_loader::GameAssets, despawn::ScoreEvent, schedule::InGameSet, state::GameState};
+use crate::{despawn::ScoreEvent, schedule::InGameSet, state::GameState};
 
 #[derive(Component)]
 pub struct Score {
@@ -33,7 +33,7 @@ fn init_score(mut commands: Commands, query: Query<&Score>) {
     commands.spawn(Score::new(0));
 }
 
-fn reset_score(mut commands: Commands, mut query: Query<&mut Score>) {
+fn reset_score(mut query: Query<&mut Score>) {
     let Ok(mut score) = query.get_single_mut() else {
         return;
     };

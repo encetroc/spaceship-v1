@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-use crate::{asset_loader::GameAssets, schedule::InGameSet, state::GameState};
+use crate::asset_loader::GameAssets;
 
 const BG_SIZE: f32 = 256.0;
 
@@ -15,7 +15,7 @@ impl Plugin for BgPlugin {
     }
 }
 
-fn spawn_bg(mut commands: Commands, game_assets: Res<GameAssets>, query: Query<&Bg>) {
+fn spawn_bg(mut commands: Commands, game_assets: Res<GameAssets>) {
     for x in 0..6 {
         for y in 0..5 {
             commands.spawn((

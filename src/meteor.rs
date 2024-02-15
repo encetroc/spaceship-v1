@@ -2,7 +2,6 @@ use bevy::prelude::*;
 use rand::Rng;
 use std::ops::Range;
 
-const SPAWN_RANGE_X: Range<f32> = -600.0..600.0;
 const SPAWN_RANGE_Y: Range<f32> = -320.0..320.0;
 const VELOCITY_SCALAR: f32 = 50.0;
 const ANGULAR_SPEED_RANGE: Range<f32> = -5.0..5.0;

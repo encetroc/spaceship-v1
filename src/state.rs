@@ -35,10 +35,6 @@ pub fn pause_game(
     }
 }
 
-fn transition_to_in_game(mut next_state: ResMut<NextState<GameState>>) {
-    next_state.set(GameState::InGame);
-}
-
 fn start_game(mut next_state: ResMut<NextState<GameState>>, keyboard_input: Res<Input<KeyCode>>) {
     if keyboard_input.just_pressed(KeyCode::S) {
         next_state.set(GameState::InGame);
